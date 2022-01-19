@@ -1,4 +1,4 @@
-# Alaram Clock  app
+#News app
 A News app
 
 
