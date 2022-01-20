@@ -28,7 +28,7 @@ body{
 }
 .category li{
     padding: 10px;
-    margin: 3px;
+    margin: 10px;
 }
 .latest-news
 {
@@ -40,4 +40,10 @@ body{
 {
     margin-top:4px;
     margin-bottom: 4px;
+    object-fit: contain;
+}
+.card-title
+{
+    height: 48px;
+    overflow: hidden;
 }

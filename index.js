@@ -39,7 +39,7 @@ class Newsapp {
          <img class="card-img-top" src="${data.multimedia[0].url}" alt="Card image cap">
          <div class="card-body">
          <h6 class="card-title">Published on :${data.published_date.substring(0, 10)}</h6>
-          <p class="card-text">  ${data.title.length < 50 ? data.title : data.title.substring(0, 47) + '...'}</p>
+          <div class='card-title'><p class="card-text">  ${data.title.length < 50 ? data.title : data.title.substring(0, 47) + '...'}</p></div>
           <a href="${data.url}" class="btn btn-primary">Read more</a>
           </div>
         </div>`
