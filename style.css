@@ -28,10 +28,16 @@ body{
 }
 .category li{
     padding: 10px;
+    margin: 3px;
 }
 .latest-news
 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+.card
+{
+    margin-top:4px;
+    margin-bottom: 4px;
 }
