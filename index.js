@@ -18,11 +18,17 @@ class Newsapp {
         const newsDiv = document.getElementById("latest-news");
         let i = 0;
         let count = 0;
+        let newsJson=[];
+        
         while (i < results.length) {
             if (results[i].multimedia === null) {
                 i++;
                 continue;
             }
+            let newObj={};
+            newObj['title']=results[i].title;
+            newObj['url']=results[i].url;
+            newsJson.push(newObj);
             const newsItem = this.createDomEle(results[i]);
             newsDiv.prepend(newsItem);
             i++;
@@ -31,6 +37,8 @@ class Newsapp {
                 break;
             }
         }
+
+        console.log("Latest five news ",newsJson);
     }
     //create DOM element
     createDomEle(data) {
@@ -54,3 +62,27 @@ class Newsapp {
 }
 const app=new Newsapp();
 app.IntializeApp();
+
+// var user = 'bhagavanmarpadaga@gmail.com';
+// var password = 'Hello@123';
+
+
+// //var base64encodedData = Buffer.from(user + ':' + password).toString('base64');
+// fetch('https://time.com',
+// {
+//     method: 'get',
+//     headers: {
+//       'Content-Type': 'application/json',
+//       'Accept': 'application/json',
+//       'Access-Control-Allow-Origin':'https://time.com',
+//       'Access-Control-Allow-Methods':'get',
+      
+//     }
+//   })
+// .then(response => response.text())
+// .then(data => {
+//     console.log("data from times",data)
+    
+// }).catch(err => {
+//     console.log("Error while fetching data ", err);
+// })
